@@ -6,8 +6,8 @@ spack:
   view: false
 
   concretizer:
-    unify: true
-    reuse: true
+    unify: false
+    reuse: false
 
   packages:
     all:
