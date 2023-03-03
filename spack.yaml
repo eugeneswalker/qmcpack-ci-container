@@ -13,6 +13,9 @@ spack:
     all:
       require: "%gcc"
       target: [x86_64]
+      providers:
+        mpi: [mpich]
+        blas: [openblas]
     cuda:
       require: "@11.4.4"
     mpich:
