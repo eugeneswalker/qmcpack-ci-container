@@ -4,23 +4,21 @@
 
 spack:
   view: false
-
   concretizer:
     unify: false
     reuse: false
-
   packages:
     all:
-      require: "%gcc"
+      require: '%gcc'
       target: [x86_64]
-      providers:
-        mpi: [mpich]
-        blas: [openblas]
+    mpi:
+      require: mpich
+    blas:
+      require: openblas
     cuda:
-      require: "@11.4.4"
+      require: '@11.4.4'
     mpich:
-      require: "~wrapperrpath"
-  
+      require: ~wrapperrpath
   specs:
   - qmcpack@develop +timers ~afqmc ~complex ~mixed +mpi ~cuda               # real
   - qmcpack@develop +timers ~afqmc ~complex ~mixed ~mpi +cuda cuda_arch=80  # real-offload
