@@ -4,9 +4,11 @@
 
 spack:
   view: false
+
   concretizer:
     unify: false
     reuse: false
+
   packages:
     all:
       require: '%gcc'
@@ -21,8 +23,12 @@ spack:
       require: ~wrapperrpath
   specs:
   - qmcpack@develop +timers ~afqmc ~complex ~mixed +mpi ~cuda               # real
-  - qmcpack@develop +timers ~afqmc ~complex ~mixed ~mpi +cuda cuda_arch=80  # real-offload
-  - qmcpack@develop +timers ~afqmc ~complex +mixed +mpi ~cuda               # mixed
-  - qmcpack@develop +timers ~afqmc ~complex +mixed +mpi +cuda cuda_arch=80  # mixed-offload
-  - qmcpack@develop +timers ~afqmc +complex +mpi ~cuda                      # complex
-  - qmcpack@develop +timers ~afqmc +complex ~mpi +cuda cuda_arch=80         # complex-offload
+  # - qmcpack@develop +timers ~afqmc ~complex ~mixed ~mpi +cuda cuda_arch=80  # real-offload
+  # - qmcpack@develop +timers ~afqmc ~complex +mixed +mpi ~cuda               # mixed
+  # - qmcpack@develop +timers ~afqmc ~complex +mixed +mpi +cuda cuda_arch=80  # mixed-offload
+  # - qmcpack@develop +timers ~afqmc +complex +mpi ~cuda                      # complex
+  # - qmcpack@develop +timers ~afqmc +complex ~mpi +cuda cuda_arch=80         # complex-offload
+
+  develop:
+    qmcpack:
+      spec: qmcpack@develop +timers ~afqmc ~complex ~mixed +mpi ~cuda       # real
