@@ -14,7 +14,7 @@ spack:
 
   packages:
     all:
-      require: '%gcc%11.1.0'
+      require: '%gcc@11.1.0'
       target: [x86_64]
     mpi:
       require: mpich
