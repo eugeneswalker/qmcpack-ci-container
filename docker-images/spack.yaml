@@ -20,6 +20,12 @@ spack:
       require: mpich
     blas:
       require: openblas
+    cuda:
+      require: '@11.4.4'
+    mpich:
+      require: ~wrapperrpath
+    hdf5:
+      require: '@1.12.1'
 
   specs:
   - cuda@11.4.4~allow-unsupported-compilers~dev build_system=generic
